@@ -1,0 +1,5 @@
+node_modules/
+logs/
+server_config.json
+rules.json
+.env
