@@ -3,3 +3,4 @@ logs/
 server_config.json
 rules.json
 .env
+.DS_Store

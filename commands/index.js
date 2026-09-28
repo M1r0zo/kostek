@@ -1,18 +1,14 @@
-/**
- * Central command registry.
- * To add a new command: create a file in /commands that exports { definition, execute }
- * (or a named map like rules.js / channels.js), then register it here.
- * The interaction router in index.js never needs to change.
- */
-const custom   = require('./custom');
-const arenki   = require('./arenki');
-const rules    = require('./rules');
-const channels = require('./channels');
-const logs     = require('./logs');
+const custom      = require('./custom');
+const arenki      = require('./arenki');
+const rollvalomap = require('./rollvalomap');
+const rules       = require('./rules');
+const channels    = require('./channels');
+const logs        = require('./logs');
 
 const commands = new Map([
     ['custom',      custom],
     ['arenki',      arenki],
+    ['rollvalomap', rollvalomap],
     ['addrule',     rules.addrule],
     ['removerule',  rules.removerule],
     ['rules',       rules.rules],

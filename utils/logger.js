@@ -25,9 +25,10 @@ function formatLine(level, args) {
 
 function writeToFile(line) {
     try {
+        if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
         fs.appendFileSync(getLogPath(), line + '\n');
     } catch {
-        // Never let file I/O crash the bot
+        // never let file I/O crash the bot
     }
 }
 
